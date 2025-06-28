@@ -935,19 +935,24 @@
     </div>
   </div>
 
-  <!-- Success message handler -->
-  <div id="form-success" class="text-center" style="display:none;">
-    <p style="color: green; font-weight: 600; margin-top: 20px;">
-      ✅ Thank you! We will be in touch with you soon.
-    </p>
-  </div>
+<div id="form-success" class="text-center" style="display:none;">
+  <p style="color: green; font-weight: 600; margin-top: 20px;">
+    ✅ Thank you! We will be in touch with you soon.
+  </p>
+</div>
 
-  <script>
-    // Show success message if redirected after submission
+<script>
+  // Wait until DOM is fully loaded
+  window.onload = function () {
     if (window.location.hash === "#form-success") {
-      document.getElementById("form-success").style.display = "block";
+      const successMsg = document.getElementById("form-success");
+      if (successMsg) {
+        successMsg.style.display = "block";
+        successMsg.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  </script>
+  };
+</script>
 </section>
 <!-- /Contact Section -->
 
