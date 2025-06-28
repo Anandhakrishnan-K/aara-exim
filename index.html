@@ -2,107 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Aara Exim - Trust Beyond Borders. Cold-pressed coconut oil and premium exports from Tamil Nadu to the world.">
-  <title>Aara Exim - Trust Beyond Borders</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Aara Exim - Trust Beyond Borders. Cold-pressed coconut oil and premium exports from Tamil Nadu to the world.">
+    <title>Aara Exim - Trust Beyond Borders</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <script src="assets/js/main.js"></script>
+
 <body>
-  <header class="header">
-    <div class="container header-container">
-      <h1 class="logo">Aara</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-content">
-      <h2>Acquire. Assure. Reach. Accomplish</h2>
-      <p>From farm to foreign markets — we deliver purity with precision.</p>
-      <a href="#contact" class="btn">Partner with AARA</a>
-    </div>
-  </section>
-
-  <section id="about" class="about section">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Aara Exim is a global export initiative committed to delivering natural purity from the heart of Tamil Nadu. We begin with cold-pressed coconut oil and will expand into premium goods rooted in tradition and excellence.</p>
-    </div>
-  </section>
-
-  <section id="services" class="services section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Export of Cold-Pressed Coconut Oil</li>
-        <li>Customized Packaging & Labelling</li>
-        <li>Global Logistic Handling</li>
-        <li>Private Label Supply</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact" class="contact section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</p>
-          <p><i class="bi bi-telephone"></i> +91 90803 28612</p>
-          <p><i class="bi bi-envelope"></i> kanandhakrishnan133@gmail.com</p>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">Aara</h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <form action="https://formsubmit.co/kanandhakrishnan133@gmail.com" method="POST" class="contact-form">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="box">
-          <input type="hidden" name="_subject" value="New Inquiry from Aara Exim">
-          <input type="hidden" name="_next" value="https://anandhakrishnan-k.github.io/#form-success">
+    </header>
 
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <input type="text" name="subject" placeholder="Subject" required>
-          <textarea name="message" rows="4" placeholder="Message" required></textarea>
-          <button type="submit">Partner with AARA</button>
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Acquire. Assure. Reach. Accomplish</h2>
+            <p>From farm to foreign markets — we deliver purity with precision.</p>
+            <a href="#contact" class="btn">Partner with AARA</a>
+        </div>
+    </section>
 
-          <div id="form-success" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
-            ✅ Thank you! We will be in touch with you soon.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+    <section id="about" class="about section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Aara Exim is a global export initiative committed to delivering natural purity from the heart of Tamil
+                Nadu. We begin with cold-pressed coconut oil and will expand into premium goods rooted in tradition and
+                excellence.</p>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Aara Exim. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="services" class="services section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Export of Cold-Pressed Coconut Oil</li>
+                <li>Customized Packaging & Labelling</li>
+                <li>Global Logistic Handling</li>
+                <li>Private Label Supply</li>
+            </ul>
+        </div>
+    </section>
 
-  <script>
-    window.onload = function () {
-      if (window.location.hash === "#form-success") {
-        const msg = document.getElementById("form-success");
-        if (msg) {
-          msg.style.display = "block";
-          msg.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
-  </script>
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</p>
+                    <p><i class="bi bi-telephone"></i> +91 90803 28612</p>
+                    <p><i class="bi bi-envelope"></i> kanandhakrishnan133@gmail.com</p>
+                </div>
+                <form action="https://formsubmit.co/kanandhakrishnan133@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_subject" value="New Inquiry from Aara Exim">
+                    <input type="hidden" name="_next" value="https://anandhakrishnan-k.github.io/#form-success">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="4" placeholder="Message" required></textarea>
+                    <button type="submit">Partner with AARA</button>
+
+                    <div id="form-success" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+                        ✅ Thank you! We will be in touch with you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aara Exim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            if (window.location.hash === "#form-success") {
+                const msg = document.getElementById("form-success");
+                if (msg) {
+                    msg.style.display = "block";
+                    msg.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        };
+    </script>
 </body>
 
 </html>
