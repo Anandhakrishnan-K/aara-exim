@@ -66,23 +66,32 @@
         <div class="container">
             <h2>Contact Us</h2>
             <div class="contact-grid">
+
+                <!-- Contact Info -->
                 <div class="contact-info">
                     <p><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</p>
                     <p><i class="bi bi-telephone"></i> +91 90803 28612</p>
                     <p><i class="bi bi-envelope"></i> kanandhakrishnan133@gmail.com</p>
                 </div>
-                <form action="https://formsubmit.co/kanandhakrishnan133@gmail.com" method="POST" class="contact-form">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_subject" value="New Inquiry from Aara Exim">
-                    <input type="hidden" name="_next" value="https://anandhakrishnan-k.github.io/#form-success">
 
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
+                <!-- Contact Form -->
+                <form action="https://formsubmit.co/kanandhakrishnan133@gmail.com" method="POST" class="contact-form"
+                    id="contact-form">
+                    <!-- Hidden settings -->
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="box" />
+                    <input type="hidden" name="_subject" value="New Inquiry from Aara Exim" />
+
+                    <!-- Form Fields -->
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <input type="text" name="subject" placeholder="Subject" required />
                     <textarea name="message" rows="4" placeholder="Message" required></textarea>
+
+                    <!-- Submit Button -->
                     <button type="submit">Partner with AARA</button>
 
+                    <!-- Success Message -->
                     <div id="form-success" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
                         ✅ Thank you! We will be in touch with you soon.
                     </div>
@@ -90,6 +99,7 @@
             </div>
         </div>
     </section>
+
 
     <footer class="footer">
         <div class="container">

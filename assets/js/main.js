@@ -34,3 +34,37 @@ function toggleMenu() {
     const nav = document.querySelector('.nav');
     nav.classList.toggle('open');
 }
+
+// Intercept form submit to show success message without redirection
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const successMsg = document.getElementById("form-success");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form redirect
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then(response => {
+          if (response.ok) {
+            form.reset(); // Clear form
+            successMsg.style.display = "block";
+            successMsg.scrollIntoView({ behavior: "smooth" });
+          } else {
+            alert("Oops! Something went wrong. Please try again.");
+          }
+        })
+        .catch(error => {
+          alert("Network error. Please check your connection and try again.");
+        });
+    });
+  }
+});
